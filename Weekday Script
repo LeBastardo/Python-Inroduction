@@ -1,0 +1,13 @@
+Week = {
+    "Weekday": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "Weekend": ["Saturday","Sunday"]
+}
+days = Week["Weekday"] + Week["Weekend"]
+print(days)
+day = input("Write a day to learn more: ")
+
+if day in days:
+    for i in Week:
+        for d in Week[i]:
+            if d == day:
+                print("%s is a %s and is weekday %i" % (day,i,days.index(day)))
